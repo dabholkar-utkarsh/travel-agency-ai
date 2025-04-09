@@ -18,7 +18,7 @@ An intelligent travel planning assistant powered by [PraisonAI Agents](https://p
 
 ## 🚀 Demo Preview
 
-*(Add a screenshot or gif of the Gradio app here)*
+Demo_picture.png
 
 ---
 
