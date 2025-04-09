@@ -26,7 +26,7 @@ An intelligent travel planning assistant powered by [PraisonAI Agents](https://p
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com//ai-travel-agency.git
+git clone https://github.com/dabholkar-utkarsh/ai-travel-agency.git
 cd ai-travel-agency
 ```
 
