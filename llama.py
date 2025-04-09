@@ -11,25 +11,25 @@ brave_api_key = os.getenv("BRAVE_API_KEY")
 
 research_agent = Agent(
     instructions= "Research about travel destinations, attractions, local customs, and travel requirements",
-    llm="groq/meta-llama/llama-4-scout-17b-16e-instruct",
+    llm="groq/llama-3.1-8b-instant",
     tools=MCP("npx -y @modelcontextprotocol/server-brave-search", env={"BRAVE_API_KEY": brave_api_key})
 )
 
 flight_agent = Agent(
     instructions= "Search for available flights, compare prices, and recommend optimal flight choices",
-    llm="groq/meta-llama/llama-4-scout-17b-16e-instruct",
+    llm="groq/llama-3.1-8b-instant",  
     tools=MCP("npx -y @modelcontextprotocol/server-brave-search", env={"BRAVE_API_KEY": brave_api_key})
 )
 
 hotel_agent = Agent(
     instructions="Research hotels and accommodation based on budget and preferences",
-    llm="groq/meta-llama/llama-4-scout-17b-16e-instruct",
+    llm="groq/llama-3.1-8b-instant",
     tools=MCP("npx -y @modelcontextprotocol/server-brave-search", env={"BRAVE_API_KEY": brave_api_key})
 )
 
 itinerary_agent = Agent(
     instructions="Design detailed day-by-day travel plans incorporating activities, transport, and rest time",
-    llm="groq/meta-llama/llama-4-scout-17b-16e-instruct",
+    llm="groq/llama-3.1-8b-instant",
     tools=MCP("npx -y @modelcontextprotocol/server-brave-search", env={"BRAVE_API_KEY": brave_api_key})
 )
 
@@ -49,7 +49,7 @@ def generate_travel_plan(destination, dates, budget, preferences):
     """
     
     # Initialize the agents team
-    agents = Agents(agents=[research_agent, flight_agent, hotel_agent, itinerary_agent])
+    agents = Agents(agents=[research_agent, flight_agent, itinerary_agent])
     
     try:
         # Generate the travel plan
