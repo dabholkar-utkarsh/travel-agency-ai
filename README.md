@@ -18,7 +18,7 @@ An intelligent travel planning assistant powered by [PraisonAI Agents](https://p
 
 ## 🚀 Demo Preview
 
-Demo_picture.png
+![AI Travel Agency Demo](Demo_picture.png)
 
 ---
 
